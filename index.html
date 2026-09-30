@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="GuidedVTLA unifies proactive tactile guidance and reactive tactile refinement for contact-rich robot manipulation.">
+<meta name="robots" content="noindex,nofollow">
+<title>GuidedVTLA — Touch that guides. Touch that reacts.</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="video.css">
+<script src="media-config.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav wrap">
+<a class="wordmark" href="#top"><span class="mark" aria-hidden="true">g.</span> GuidedVTLA</a>
+<nav aria-label="Main navigation"><a href="#idea">The idea</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="https://github.com/Shengqi77/GuidedVTLA" target="_blank" rel="noopener">Code ↗</a></nav>
+</header>
+<main id="main">
+<section class="hero wrap" id="top">
+<div class="hero-video-layer" aria-hidden="true"><video id="hero-video" muted loop playsinline preload="metadata"></video></div>
+<div class="eyebrow"><span class="dot"></span> VISION · TOUCH · LANGUAGE · ACTION</div>
+<h1>Touch that <em>guides.</em><br>Touch that <em>reacts.</em></h1>
+<p class="hero-sub">GuidedVTLA brings contact awareness to action generation<br class="desktop"> and tactile feedback to action refinement.</p>
+<div class="hero-actions"><a class="button primary" href="#idea">Explore the idea <span>↓</span></a><a class="button plain" href="#method">How it works ↗</a><button class="button video-control" id="hero-video-toggle" hidden>Play video</button></div>
+<div class="hero-foot"><span>Two complementary roles. One shared tactile guidance.</span><span class="preview">RESEARCH WEBSITE PREVIEW</span></div>
+</section>
+<section class="showcase wrap" aria-label="Robot platforms">
+<div class="showcase-top"><span>FROM DELICATE GRASPS TO PRECISE INSERTIONS</span><span>ALOHA & FLEXIV</span></div>
+<img src="assets/platforms.webp" alt="Original paper figure showing the ALOHA and Flexiv robots and six real manipulation tasks." width="1800" height="712" fetchpriority="high">
+<div class="showcase-bottom"><span>Real robots. Contact-rich manipulation.</span><span>Paper figure · video montage to follow</span></div>
+</section>
+<div class="facts wrap"><div><strong>02</strong><span>Robot platforms</span></div><div><strong>06</strong><span>Real-world tasks</span></div><div><strong>08</strong><span>Simulation tasks</span></div></div>
+
+<section class="section wrap" id="idea">
+<div class="section-heading"><div><span class="eyebrow">01 / THE IDEA</span><h2>Touch has two sides.</h2></div><p>Contact dynamics help guide what to do.<br>Temporal touch helps refine how to do it.</p></div>
+<div class="roles">
+<article><span class="role-label">PROACTIVE GUIDANCE</span><h3>Understand the contact stage.</h3><p>Cumulative tactile motion and its signed change provide complementary contact cues that guide both experts.</p></article>
+<article><span class="role-label blue">REACTIVE REFINEMENT</span><h3>Respond as contact evolves.</h3><p>Temporal tactile feedback informs low-frequency action refinement, while shared guidance modulates its strength.</p></article>
+</div>
+<div class="interactive" id="overview-player">
+<div class="panel-top"><div class="tabs" aria-label="Policy designs"><button data-policy="0" aria-pressed="false">Standard VTLA</button><button data-policy="1" aria-pressed="false">Slow-fast VTLA</button><button data-policy="2" aria-pressed="true">GuidedVTLA</button></div><button class="control" id="overview-play" aria-pressed="false">Next design →</button></div>
+<div class="figure-scroll"><div class="overview-figure"><img src="assets/overview.webp" alt="Original overview comparing standard VTLA, slow-fast VTLA, and GuidedVTLA." width="1800" height="998" loading="lazy"><div class="policy-highlight" aria-hidden="true"></div></div></div>
+<div class="panel-caption"><span class="number" id="policy-number">03</span><div><h3 id="policy-title">Stage-aware generation and refinement</h3><p id="policy-copy">Shared tactile guidance coordinates the slow and fast experts, coupling contact-aware action generation with reactive spectral refinement.</p></div></div>
+<p class="figure-note">Original paper overview. Select a design to read the comparison. A dedicated visual explanation is planned.</p>
+</div>
+</section>
+
+<section class="method-section" id="method"><div class="wrap section">
+<div class="section-heading"><div><span class="eyebrow">02 / THE METHOD</span><h2>Generate with context.<br>Refine with touch.</h2></div><p>Follow the information flow through the original method figure.</p></div>
+<div class="steps" aria-label="Method steps">
+<button data-step="0" aria-pressed="true"><span>01</span><strong>Read contact</strong><small>Shared tactile guidance</small></button>
+<button data-step="1" aria-pressed="false"><span>02</span><strong>Generate actions</strong><small>Tactile-aware slow expert</small></button>
+<button data-step="2" aria-pressed="false"><span>03</span><strong>Refine actions</strong><small>Tactile-aware fast expert</small></button>
+</div>
+<div class="method-panel">
+<div class="method-toolbar"><span id="step-tag">TACTILE DYNAMICS → SHARED GUIDANCE</span><div><button id="method-play" class="control" aria-pressed="false">Next step →</button><button class="control" id="enlarge">View full figure ↗</button></div></div>
+<div class="figure-scroll"><div class="method-figure"><img src="assets/method.webp" alt="Original GuidedVTLA architecture showing tactile guidance, slow action generation, and fast spectral refinement." width="2000" height="806" loading="lazy"><div class="method-highlight" aria-hidden="true"></div></div></div>
+<div class="method-description" aria-live="polite"><h3 id="step-title">One contact signal, two coordinated experts.</h3><p id="step-copy">Cumulative motion and its signed change are encoded into shared guidance. This guidance conditions slow-expert routing and controls refinement strength in the fast expert.</p></div>
+</div>
+<p class="figure-note">Original method figure. The step descriptions explain the architecture; a dedicated method video is planned.</p>
+</div></section>
+
+<section class="section wrap" id="experiments">
+<div class="section-heading"><div><span class="eyebrow">03 / THE EXPERIMENTS</span><h2>Delicate. Precise. Multi-stage.</h2></div><p>Six physical tasks across two embodiments.<br>Eight contact-rich tasks in UniVTAC.</p></div>
+<div class="task-grid">
+<article><span>ALOHA / DUAL ARM</span><h3>Handle fragile objects.</h3><ul><li>Fragile chips collection</li><li>Fragile fruits collection</li><li>Cylinder cleaning & collection</li></ul><p class="pending">Full task videos are being prepared.</p></article>
+<article><span>FLEXIV / SINGLE ARM</span><h3>Find the right contact.</h3><ul><li>Plug insertion</li><li>Gears assembly</li><li>USB light insertion</li></ul><p class="pending">Full task videos are being prepared.</p></article>
+</div>
+<div class="results-head"><h3>Simulation, with matched comparisons.</h3><div class="scope-tabs" aria-label="Evaluation scope"><button data-scope="six" aria-pressed="true">Shared 6 tasks</button><button data-scope="eight" aria-pressed="false">All 8 tasks</button></div></div>
+<div class="chart" id="chart" role="img" aria-label="Mean success rate across six shared tasks: GuidedVTLA 84.8 percent, FTP-1 66.7 percent, pi 0.5 45.7 percent.">
+<div class="bar-row"><span>GuidedVTLA</span><div><i class="ours" style="width:84.8333%"></i></div><strong id="ours-value">84.8%</strong></div>
+<div class="bar-row"><span id="baseline-name">FTP-1</span><div><i class="baseline" style="width:66.6667%"></i></div><strong id="baseline-value">66.7%</strong></div>
+<div class="bar-row"><span>π₀.₅</span><div><i class="base" style="width:45.6667%"></i></div><strong id="base-value">45.7%</strong></div>
+<div class="chart-axis"><span>Mean success rate (%)</span><span>0 ─────────────────── 100</span></div>
+</div>
+<p class="figure-note" id="scope-note">Means computed over the first six UniVTAC tasks. FTP-1 results are cited in the paper. Eight-task results are compared separately. Values reflect the current manuscript.</p>
+</section>
+<section class="closing wrap" id="resources"><div><span class="eyebrow">GUIDEDVTLA</span><h2>Where proactive guidance<br>meets reactive refinement.</h2></div><a class="button primary" href="https://github.com/Shengqi77/GuidedVTLA" target="_blank" rel="noopener">Explore the code ↗</a></section>
+<footer class="wrap"><span>GuidedVTLA · Research project</span><span>Preview · Author information, paper link and videos pending</span></footer>
+</main>
+<dialog id="figure-dialog" aria-label="Full method figure"><button id="close-dialog" class="control">Close ×</button><img src="assets/method.webp" alt="Full GuidedVTLA method figure"><p>Original method figure from the manuscript.</p></dialog>
+</body>
+</html>

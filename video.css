@@ -1,0 +1,19 @@
+
+/* Preview revision: keep the paper figures still. The production animation
+   will use editable layers or a authored method video, not scanning boxes. */
+.policy-highlight,.method-highlight{display:none!important}
+.hero{position:relative;isolation:isolate}
+.hero-video-layer{display:none;position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero-video-layer video{width:100%;height:100%;object-fit:cover}
+.hero-video-layer::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,22,20,.78),rgba(15,22,20,.1))}
+.hero.video-ready{width:100%;padding:95px max(30px,calc((100vw - 1160px)/2)) 28px;color:white;min-height:640px;margin-bottom:28px}
+.hero.video-ready .hero-video-layer{display:block}
+.hero.video-ready .hero-sub,.hero.video-ready .hero-foot{color:#e4e6e3}
+.hero.video-ready h1 em{color:#f1c1b6}
+.hero.video-ready .primary{background:#fff;color:#222622}
+.hero.video-ready .video-control{display:inline-flex;background:#ffffff15;border:1px solid #ffffff55;color:white;margin-left:8px}
+.video-control[hidden]{display:none}
+.hero.video-ready .plain{color:white}
+.hero.video-ready .eyebrow{color:#e9ede8}
+@media(max-width:760px){.hero.video-ready{min-height:570px;padding:64px 24px 24px}.hero-video-layer::after{background:#12191299}}
+
