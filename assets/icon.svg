@@ -1,2 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#222622"/><text x="13" y="44" fill="#fff" font-family="Georgia,serif" font-size="48">g.</text></svg>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>GuidedVTLA tactile fingerprint</title>
+  <defs><linearGradient id="touch" x1="0" y1="0" x2="1" y2=".4" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#ffc0c6"/><stop offset=".34" stop-color="#f0b7e4"/><stop offset=".64" stop-color="#c2beff"/><stop offset="1" stop-color="#91e3ff"/></linearGradient></defs>
+  <g fill="none" stroke="url(#touch)" stroke-width="3.8" stroke-linecap="round">
+    <path d="M10 28C10 15 19 6 32 6c13 0 22 9 22 22"/>
+    <path d="M6 37c2-3 4-5 4-9M54 36c0 7-1 12-3 17"/>
+    <path d="M15 43c3-5 3-10 3-15a14 14 0 0 1 28 0c0 12-1 22-5 30"/>
+    <path d="M10 52c3-2 5-5 6-8M21 52c4-7 5-15 5-24a6 6 0 0 1 12 0c0 14-1 24-6 32"/>
+    <path d="M32 28c0 13-2 24-8 32"/>
+  </g>
+</svg>
