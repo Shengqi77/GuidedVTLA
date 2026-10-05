@@ -1,0 +1,7 @@
+.resource-button{gap:9px;border-radius:24px;padding:10px 18px}
+.resource-icon{width:19px;height:19px;flex:none}
+.resource-button small{font-size:10px;font-weight:500;opacity:.8;padding-left:2px}
+.button.pending{background:#f0f0eb;color:#626663;border-color:#d8dcd4;cursor:default}
+.button.pending:hover{transform:none}
+.cinema .button.pending{background:#17212ab3;color:#f2f4f7;border-color:#ffffff55;backdrop-filter:blur(6px)}
+@media(max-width:500px){.resource-button{padding:9px 12px;font-size:12px;gap:6px}.resource-button small{font-size:9px}}

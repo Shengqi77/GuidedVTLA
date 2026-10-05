@@ -1,55 +1,48 @@
 # GuidedVTLA website
 
-A lightweight, responsive research project page. Pure HTML, CSS and JavaScript; no build system, CDN dependency or framework.
+Static research website built with HTML, CSS and JavaScript. No build step is required.
 
-## Preview locally
+## Local preview
 
-Run from this directory:
+Run `python -m http.server 8088 --bind 127.0.0.1` from this directory, then open http://127.0.0.1:8088.
 
-```bash
-python -m http.server 8088 --bind 127.0.0.1
-```
+## Current version (October 5, 2026)
 
-Open http://127.0.0.1:8088. You can also open index.html directly.
+- Full-width video hero with matching pastel-gradient GuidedVTLA wordmarks.
+- Top-center More Related Research dropdown linking four related projects.
+- Paper, arXiv and Code are Coming soon placeholders without outbound links.
+- Paper-order narrative: overview, method, tactile dynamics, spectral analysis, setup, qualitative and quantitative results, robustness and cross-sensor evaluation.
+- Five independent task carousels contain 17 clips cut from the supplied 4K demo. The website serves 1080p H.264 derivatives.
+- Videos loop silently while visible, pause offscreen, and respect reduced-motion preferences.
+- Quantitative results use tables only. Real-world scores show final-stage success rates over 20 trials per task. Their six-task mean is computed from final-stage scores. Simulation reports shared-six-task and complete-eight-task means separately. Missing entries are not zeros.
+- Warm off-white background and restrained blue table highlighting. Bold marks column-best values including ties.
+- No manuscript PDF or private training files are included.
 
-## Current version
+## Active files
 
-- Warm white, charcoal and restrained #c1272d accents.
-- Original paper overview with three manually selectable design explanations.
-- Original method figure with three-step text guidance. Scanning boxes were removed after design review.
-- Optional real-video hero via media-config.js, with pause, offscreen pause and reduced-motion support.
-- Interactive six-task / eight-task UniVTAC comparisons; scopes are kept separate.
-- Paper figures serve as honest still-image placeholders until task videos arrive.
-- No fabricated robot videos, tactile measurements or runtime frequencies.
-- No paper PDF or source manuscript is included in this repository.
-- Author and citation metadata are intentionally pending.
+- `index.html`: content, metadata, result tables and resource buttons.
+- `project.css/js`: base layout and figure zoom.
+- `hero.css/js`: video hero and playback behavior.
+- `story.css`, `identity.css`: paper narrative and title/author presentation.
+- `tasks.css/js`: task video carousels and autoplay.
+- `quantitative.css`: result tables and background.
+- `related.css/js`: related-project dropdown.
+- `resources.css`: placeholder resource buttons.
+- `assets/tasks/`: 17 task video clips and posters.
+- `assets/hero-montage.mp4`: silent 12-second montage.
+- `scripts/export_assets.py`: author-owned PDF figure conversion (PyMuPDF and Pillow).
 
-This is a **design preview**, not a finalized publication site. The robots meta tag currently disables indexing. Check the figures against the final manuscript before release.
+Legacy `style.css`, `app.js`, `video.css` and `media-config.js` are retained but not loaded. Local chapter-length videos under `assets/demos/` and local preview files are not needed or included in this update.
 
-## Files
+## Hosting
 
-- index.html: page sections and manuscript-derived text
-- style.css: layout, design tokens, responsive behavior
-- app.js: figure highlights, playback and matched-scope results
-- media-config.js: optional real robot hero video and poster paths
-- video.css: hero video styles and static figure presentation
-- assets/: WebP versions of the paper figures and project icon
-- SITE_PLAN_ZH.md: design references, animation plan and prioritized asset checklist
-- scripts/export_assets.py: reproducible PDF figure conversion (requires PyMuPDF and Pillow)
+Repository: https://github.com/Shengqi77/GuidedVTLA-web
 
-No third-party project assets or website source are copied. Figure ownership remains with the paper authors.
+For GitHub Pages, use Settings > Pages > Deploy from a branch > main > /(root).
+All asset paths are relative and support the /GuidedVTLA-web/ project path.
 
-## GitHub
+The robots meta tag still disables indexing while release links are pending. Replace resource placeholders with verified URLs and add the final citation when ready.
 
-Target repository: https://github.com/Shengqi77/GuidedVTLA-web
+## Visual references
 
-For GitHub Pages, after final media and author review: Settings → Pages → Deploy from a branch → main → /(root). All asset paths are relative and work under /GuidedVTLA-web/. Publication is a separate step from preparing the preview.
-
-## Before publishing
-
-1. Replace robot figure with a real video montage with a poster image; retain a visible play/pause button.
-2. Supply final author list, affiliations, paper URL and verified BibTeX.
-3. Recheck quantitative claims against the final paper.
-4. Confirm original figure labels, equations and frequencies match the final method.
-5. Add accessible captions to videos, record playback speed and identify simulation footage.
-6. Remove the preview messages and noindex only when the page is ready.
+Layout references include RVD, DP3, Seeing Touch from Motion, 4K4D, OptiWorld, T-Rex, Touch in the Wild and ActiveMimic. Implementations are original; third-party videos and website source are not bundled. Media belongs to the paper authors.

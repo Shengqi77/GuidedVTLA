@@ -13,6 +13,10 @@ for source, name, width in [
     ('fig01_overview.pdf', 'overview.webp', 1800),
     ('fig02_framework.pdf', 'method.webp', 2000),
     ('fig05_platform_tasks.pdf', 'platforms.webp', 1800),
+    ('fig03_tactile_dynamics.pdf', 'dynamics.webp', 2200),
+    ('fig04_action_spectrum.pdf', 'spectrum.webp', 2200),
+    ('fig07_cross_sensor.pdf', 'cross-sensor.webp', 2000),
+    ('supp02_sim_setup.pdf', 'simulation.webp', 2000),
 ]:
     with fitz.open(args.figure_dir / source) as doc:
         page = doc[0]

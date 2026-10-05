@@ -1,0 +1,12 @@
+.research-nav{position:relative;z-index:50;display:flex;justify-content:center;background:#faf6f8;border-bottom:1px solid #e1e2d9;padding:5px 16px}
+.research-menu{position:relative}
+.research-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:10px 15px;font-size:14px;font-weight:550;color:#383b39;border-radius:7px}
+.research-menu summary::-webkit-details-marker{display:none}
+.research-menu summary:hover,.research-menu[open] summary{background:#e9ede5}
+.research-menu summary>span{font-size:20px;line-height:1;transition:transform .15s}
+.research-menu[open] summary>span{transform:rotate(180deg)}
+.research-links{position:absolute;top:calc(100% + 7px);left:50%;transform:translateX(-50%);width:300px;max-width:calc(100vw - 32px);padding:7px;background:#fffef9;border:1px solid #dedfd6;border-radius:12px;box-shadow:0 12px 35px #17212122}
+.research-links a{display:block;padding:12px 14px;border-radius:7px;text-decoration:none;color:#353b3b;font-size:14px}
+.research-links a:hover,.research-links a:focus-visible{background:#edf3f5;color:#225b7b}
+.research-links a>span{float:right;color:#628393}
+.research-links sub{line-height:0}

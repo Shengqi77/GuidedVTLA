@@ -1,0 +1,18 @@
+.cinema{position:relative;isolation:isolate;display:grid;place-items:center;width:100%;height:auto;aspect-ratio:16/9;min-height:0;overflow:hidden;background:#17191b;color:white}
+.cinema video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
+.cinema-shade{position:absolute;inset:0;background:linear-gradient(180deg,#070a1208 0%,#070a1220 24%,#070a1266 42%,#070a1255 58%,#070a1210 72%,#070a1210 100%);z-index:-1}
+.cinema-content{text-align:center;width:min(1050px,calc(100% - 48px));padding:42px 0 75px;text-shadow:0 2px 24px #0008}
+.cinema-kicker{font-size:12px;font-weight:650;letter-spacing:3px;margin-bottom:20px;color:#fff}
+.cinema h1{font-size:clamp(60px,7.8vw,112px);font-weight:750;letter-spacing:-4px;line-height:1.05;margin:0 0 22px;color:#fff}
+.cinema-subtitle{font-size:clamp(23px,2.7vw,38px);line-height:1.35;letter-spacing:-.7px;font-weight:550;margin-bottom:28px}
+.cinema .button{text-shadow:none;background:#fff;color:#222;border-color:#fff}
+.cinema .button:hover{background:#eee}
+.cinema .cinema-link{color:#fff;background:#1115;border-color:#ffffff8c;backdrop-filter:blur(8px)}
+.cinema .cinema-link:hover{background:#1119}
+.cinema-scroll{position:absolute;bottom:26px;left:32px;color:#fff;text-decoration:none;font-size:12px;letter-spacing:.5px}
+.cinema-toggle{position:absolute;right:28px;bottom:22px;color:white;border:1px solid #ffffff80;background:#15192188;backdrop-filter:blur(6px);border-radius:8px;padding:9px 15px;font-size:12px}
+.cinema-toggle:hover{background:#151921cc}
+.paper-heading{color:var(--red);margin-bottom:24px;font-size:34px}
+@media(max-width:760px){.cinema{aspect-ratio:auto}}
+@media(min-width:761px) and (max-height:750px){.cinema-content{padding:20px 0 45px}.cinema h1{font-size:64px;margin-bottom:12px}.cinema-kicker{font-size:10px;margin-bottom:12px}.cinema-subtitle{font-size:24px;margin-bottom:20px}}
+@media(max-width:760px){.cinema{display:block;height:auto;min-height:0;max-height:none;overflow:visible}.cinema video{position:relative;inset:auto;aspect-ratio:16/9;height:auto;object-fit:contain;z-index:0}.cinema-shade{top:0;bottom:auto;height:auto;aspect-ratio:16/9;background:linear-gradient(180deg,transparent 60%,#17191b);z-index:1;pointer-events:none}.cinema-content{position:relative;width:100%;padding:24px 18px 72px;text-shadow:none}.cinema-kicker{font-size:9px;letter-spacing:1.3px;margin-bottom:14px}.cinema h1{font-size:51px;letter-spacing:-2px;margin-bottom:17px}.cinema-subtitle{font-size:21px;letter-spacing:-.3px}.cinema-scroll{left:18px;bottom:22px;font-size:10px}.cinema-toggle{right:16px;bottom:15px;padding:7px 10px;font-size:11px}.paper-heading{font-size:27px}}

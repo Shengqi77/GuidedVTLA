@@ -3,84 +3,160 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="GuidedVTLA unifies proactive tactile guidance and reactive tactile refinement for contact-rich robot manipulation.">
+<meta name="description" content="GuidedVTLA coordinates slow action generation and fast tactile refinement through shared contact-stage guidance.">
 <meta name="robots" content="noindex,nofollow">
-<title>GuidedVTLA — Touch that guides. Touch that reacts.</title>
+<title>GuidedVTLA | Proactive Guidance, Reactive Refinement</title>
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="video.css">
-<script src="media-config.js" defer></script>
-<script src="app.js" defer></script>
+<link rel="stylesheet" href="project.css">
+<link rel="stylesheet" href="hero.css">
+<link rel="stylesheet" href="story.css">
+<link rel="stylesheet" href="tasks.css">
+<link rel="stylesheet" href="identity.css">
+<link rel="stylesheet" href="quantitative.css">
+<link rel="stylesheet" href="related.css">
+<link rel="stylesheet" href="resources.css">
+<script src="related.js" defer></script>
+<script src="project.js" defer></script>
+<script src="hero.js" defer></script>
+<script src="tasks.js" defer></script>
 </head>
 <body>
+<nav class="research-nav" aria-label="Related research">
+<details class="research-menu">
+<summary>More Related Research <span aria-hidden="true">&#8964;</span></summary>
+<div class="research-links">
+<a href="https://shengqi77.github.io/Seeing-Touch-from-Motion/" target="_blank" rel="noopener">Seeing Touch from Motion <span aria-hidden="true">&#8599;</span></a>
+<a href="https://research.neoteai.com/n0-foundation/" target="_blank" rel="noopener">N<sub>0</sub>-Foundation <span aria-hidden="true">&#8599;</span></a>
+<a href="https://research.neoteai.com/n0-vtla/" target="_blank" rel="noopener">N<sub>0</sub>-VTLA <span aria-hidden="true">&#8599;</span></a>
+<a href="https://research.neoteai.com/n0-twam/" target="_blank" rel="noopener">N<sub>0</sub>-TWAM <span aria-hidden="true">&#8599;</span></a>
+</div>
+</details>
+</nav>
 <a class="skip" href="#main">Skip to content</a>
-<header class="nav wrap">
-<a class="wordmark" href="#top"><span class="mark" aria-hidden="true">g.</span> GuidedVTLA</a>
-<nav aria-label="Main navigation"><a href="#idea">The idea</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="https://github.com/Shengqi77/GuidedVTLA" target="_blank" rel="noopener">Code ↗</a></nav>
+<header class="cinema" id="top" aria-label="GuidedVTLA robot demonstration">
+<video id="background-video" muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+<source src="assets/hero-montage.mp4" type="video/mp4">
+</video>
+<div class="cinema-shade" aria-hidden="true"></div>
+<div class="cinema-content">
+<h1><span class="brand-gradient">GuidedVTLA</span></h1>
+<p class="cinema-subtitle">Where <em class="concept-word proactive-word">Proactive</em> Tactile Guidance Meets <em class="concept-word reactive-word">Reactive</em> Tactile Refinement</p>
+<div class="links"><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h4M9 12h6M9 16h6"/></svg>Paper <small>Coming soon</small></span><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 3 12 18M18 3 6 21M9 8h6M9 16h6"/></svg>arXiv <small>Coming soon</small></span><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></svg>Code <small>Coming soon</small></span></div>
+</div>
+<a class="cinema-scroll" href="#paper-info">Discover GuidedVTLA ↓</a>
+<button id="background-toggle" class="cinema-toggle" type="button" aria-controls="background-video">Play background</button>
 </header>
-<main id="main">
-<section class="hero wrap" id="top">
-<div class="hero-video-layer" aria-hidden="true"><video id="hero-video" muted loop playsinline preload="metadata"></video></div>
-<div class="eyebrow"><span class="dot"></span> VISION · TOUCH · LANGUAGE · ACTION</div>
-<h1>Touch that <em>guides.</em><br>Touch that <em>reacts.</em></h1>
-<p class="hero-sub">GuidedVTLA brings contact awareness to action generation<br class="desktop"> and tactile feedback to action refinement.</p>
-<div class="hero-actions"><a class="button primary" href="#idea">Explore the idea <span>↓</span></a><a class="button plain" href="#method">How it works ↗</a><button class="button video-control" id="hero-video-toggle" hidden>Play video</button></div>
-<div class="hero-foot"><span>Two complementary roles. One shared tactile guidance.</span><span class="preview">RESEARCH WEBSITE PREVIEW</span></div>
-</section>
-<section class="showcase wrap" aria-label="Robot platforms">
-<div class="showcase-top"><span>FROM DELICATE GRASPS TO PRECISE INSERTIONS</span><span>ALOHA & FLEXIV</span></div>
-<img src="assets/platforms.webp" alt="Original paper figure showing the ALOHA and Flexiv robots and six real manipulation tasks." width="1800" height="712" fetchpriority="high">
-<div class="showcase-bottom"><span>Real robots. Contact-rich manipulation.</span><span>Paper figure · video montage to follow</span></div>
-</section>
-<div class="facts wrap"><div><strong>02</strong><span>Robot platforms</span></div><div><strong>06</strong><span>Real-world tasks</span></div><div><strong>08</strong><span>Simulation tasks</span></div></div>
-
-<section class="section wrap" id="idea">
-<div class="section-heading"><div><span class="eyebrow">01 / THE IDEA</span><h2>Touch has two sides.</h2></div><p>Contact dynamics help guide what to do.<br>Temporal touch helps refine how to do it.</p></div>
-<div class="roles">
-<article><span class="role-label">PROACTIVE GUIDANCE</span><h3>Understand the contact stage.</h3><p>Cumulative tactile motion and its signed change provide complementary contact cues that guide both experts.</p></article>
-<article><span class="role-label blue">REACTIVE REFINEMENT</span><h3>Respond as contact evolves.</h3><p>Temporal tactile feedback informs low-frequency action refinement, while shared guidance modulates its strength.</p></article>
+<div class="hero wrap" id="paper-info">
+<div class="hero-card">
+<h2 class="paper-heading"><span class="brand-gradient">GuidedVTLA</span></h2>
+<p class="paper-subtitle">Where Proactive Tactile Guidance Meets Reactive Tactile Refinement</p>
+<div class="authors" aria-label="Authors">
+<span>Shengqi Xu<sup>1,2,3</sup></span><span>Guojin Zhong<sup>1,2</sup></span><span>Yutao Fan<sup>4</sup></span><span>Tianyi Lu<sup>1,2</sup></span><span>Yuhan Zhu<sup>1,2</sup></span><span>Yutao Ling<sup>1,2</sup></span><span>Zhiying Du<sup>1,2</sup></span><span>Shunlin Lu<sup>3</sup></span><span>Ziyi Ye<sup>1,2</sup></span><span>Zuxuan Wu<sup>1,2,3,*</sup></span><span>Yu-Gang Jiang<sup>1,2,*</sup></span>
 </div>
-<div class="interactive" id="overview-player">
-<div class="panel-top"><div class="tabs" aria-label="Policy designs"><button data-policy="0" aria-pressed="false">Standard VTLA</button><button data-policy="1" aria-pressed="false">Slow-fast VTLA</button><button data-policy="2" aria-pressed="true">GuidedVTLA</button></div><button class="control" id="overview-play" aria-pressed="false">Next design →</button></div>
-<div class="figure-scroll"><div class="overview-figure"><img src="assets/overview.webp" alt="Original overview comparing standard VTLA, slow-fast VTLA, and GuidedVTLA." width="1800" height="998" loading="lazy"><div class="policy-highlight" aria-hidden="true"></div></div></div>
-<div class="panel-caption"><span class="number" id="policy-number">03</span><div><h3 id="policy-title">Stage-aware generation and refinement</h3><p id="policy-copy">Shared tactile guidance coordinates the slow and fast experts, coupling contact-aware action generation with reactive spectral refinement.</p></div></div>
-<p class="figure-note">Original paper overview. Select a design to read the comparison. A dedicated visual explanation is planned.</p>
+<p class="affiliations"><sup>1</sup> Institute of Trustworthy Embodied AI, Fudan University<br><sup>2</sup> Shanghai Key Laboratory of Multimodal Embodied AI<br><sup>3</sup> NeoteAI <span class="sep">·</span> <sup>4</sup> Harbin Institute of Technology</p>
+<p class="corresponding">* Corresponding authors</p>
+<div class="links"><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h4M9 12h6M9 16h6"/></svg>Paper <small>Coming soon</small></span><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 3 12 18M18 3 6 21M9 8h6M9 16h6"/></svg>arXiv <small>Coming soon</small></span><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></svg>Code <small>Coming soon</small></span></div>
 </div>
-</section>
-
-<section class="method-section" id="method"><div class="wrap section">
-<div class="section-heading"><div><span class="eyebrow">02 / THE METHOD</span><h2>Generate with context.<br>Refine with touch.</h2></div><p>Follow the information flow through the original method figure.</p></div>
-<div class="steps" aria-label="Method steps">
-<button data-step="0" aria-pressed="true"><span>01</span><strong>Read contact</strong><small>Shared tactile guidance</small></button>
-<button data-step="1" aria-pressed="false"><span>02</span><strong>Generate actions</strong><small>Tactile-aware slow expert</small></button>
-<button data-step="2" aria-pressed="false"><span>03</span><strong>Refine actions</strong><small>Tactile-aware fast expert</small></button>
 </div>
-<div class="method-panel">
-<div class="method-toolbar"><span id="step-tag">TACTILE DYNAMICS → SHARED GUIDANCE</span><div><button id="method-play" class="control" aria-pressed="false">Next step →</button><button class="control" id="enlarge">View full figure ↗</button></div></div>
-<div class="figure-scroll"><div class="method-figure"><img src="assets/method.webp" alt="Original GuidedVTLA architecture showing tactile guidance, slow action generation, and fast spectral refinement." width="2000" height="806" loading="lazy"><div class="method-highlight" aria-hidden="true"></div></div></div>
-<div class="method-description" aria-live="polite"><h3 id="step-title">One contact signal, two coordinated experts.</h3><p id="step-copy">Cumulative motion and its signed change are encoded into shared guidance. This guidance conditions slow-expert routing and controls refinement strength in the fast expert.</p></div>
+<div class="teaser wrap" id="overview">
+<figure><a class="image-link" href="assets/overview.webp" data-zoom><img src="assets/overview.webp" width="1800" height="998" loading="lazy" alt="Two complementary roles of touch. GuidedVTLA combines proactive contact-stage guidance with reactive tactile refinement, coordinating the slow and fast experts through shared guidance."></a><figcaption>Two complementary roles of touch. GuidedVTLA combines proactive contact-stage guidance with reactive tactile refinement, coordinating the slow and fast experts through shared guidance.</figcaption></figure>
 </div>
-<p class="figure-note">Original method figure. The step descriptions explain the architecture; a dedicated method video is planned.</p>
+<nav class="toc" aria-label="Section navigation"><div class="wrap"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#dynamics">Analysis</a><a href="#experiments">Setup &amp; tasks</a><a href="#results">Results</a><a href="#robustness">Robustness</a><a href="#cross-sensor">Cross-sensor</a></div></nav>
+<main id="main" class="wrap story">
+<section id="abstract">
+<h2>Abstract</h2>
+<div class="prose">
+<p>Multi-stage contact-rich manipulation requires robots to dynamically adapt global execution strategies across stages while responding to local contact changes in real time. However, existing methods primarily use touch as reactive feedback, leaving its potential for stage-aware guidance underexplored. In this work, we view touch as a coin with two complementary sides: locally, it provides <em>reactive</em> feedback on instantaneous contact, while globally, its temporal dynamics offer <em>proactive</em> contact stage guidance. By exploring the temporal dynamics of optical tactile sensing, we discover that cumulative tactile motions and transient differences jointly yield complementary cues for contact stages and transitions.</p>
+<p>Building on this insight, we propose GuidedVTLA, a slow-fast vision-tactile-language-action model that integrates proactive tactile guidance with reactive tactile refinement. Specifically, the slow expert uses the shared proactive guidance to route a stage-aware Mixture-of-Experts for adaptive action generation, while the fast expert uses temporal tactile cues to refine the action chunk during execution, with the shared guidance modulating refinement strength. Furthermore, motivated by the concentration of action trajectory energy in low-frequency modes, we restrict refinement to a compact spectral subspace, reducing the prediction dimension and promoting temporally smooth refinement. Experiments on multi-stage contact-rich tasks across two real-world robot platforms and in simulation demonstrate the superior performance and robustness of GuidedVTLA.</p>
 </div></section>
-
-<section class="section wrap" id="experiments">
-<div class="section-heading"><div><span class="eyebrow">03 / THE EXPERIMENTS</span><h2>Delicate. Precise. Multi-stage.</h2></div><p>Six physical tasks across two embodiments.<br>Eight contact-rich tasks in UniVTAC.</p></div>
-<div class="task-grid">
-<article><span>ALOHA / DUAL ARM</span><h3>Handle fragile objects.</h3><ul><li>Fragile chips collection</li><li>Fragile fruits collection</li><li>Cylinder cleaning & collection</li></ul><p class="pending">Full task videos are being prepared.</p></article>
-<article><span>FLEXIV / SINGLE ARM</span><h3>Find the right contact.</h3><ul><li>Plug insertion</li><li>Gears assembly</li><li>USB light insertion</li></ul><p class="pending">Full task videos are being prepared.</p></article>
-</div>
-<div class="results-head"><h3>Simulation, with matched comparisons.</h3><div class="scope-tabs" aria-label="Evaluation scope"><button data-scope="six" aria-pressed="true">Shared 6 tasks</button><button data-scope="eight" aria-pressed="false">All 8 tasks</button></div></div>
-<div class="chart" id="chart" role="img" aria-label="Mean success rate across six shared tasks: GuidedVTLA 84.8 percent, FTP-1 66.7 percent, pi 0.5 45.7 percent.">
-<div class="bar-row"><span>GuidedVTLA</span><div><i class="ours" style="width:84.8333%"></i></div><strong id="ours-value">84.8%</strong></div>
-<div class="bar-row"><span id="baseline-name">FTP-1</span><div><i class="baseline" style="width:66.6667%"></i></div><strong id="baseline-value">66.7%</strong></div>
-<div class="bar-row"><span>π₀.₅</span><div><i class="base" style="width:45.6667%"></i></div><strong id="base-value">45.7%</strong></div>
-<div class="chart-axis"><span>Mean success rate (%)</span><span>0 ─────────────────── 100</span></div>
-</div>
-<p class="figure-note" id="scope-note">Means computed over the first six UniVTAC tasks. FTP-1 results are cited in the paper. Eight-task results are compared separately. Values reflect the current manuscript.</p>
+<section id="method">
+<h2>Method</h2>
+<p class="lead">How does one tactile signal guide both action generation and refinement?</p>
+<figure><a class="image-link" href="assets/method.webp" data-zoom><img src="assets/method.webp" width="2000" height="806" loading="lazy" alt="Overview of GuidedVTLA. Shared proactive guidance connects the slow action expert with the fast spectral refinement expert."></a><figcaption>Overview of GuidedVTLA. Shared proactive guidance connects the slow action expert with the fast spectral refinement expert.</figcaption></figure>
+<div class="prose"><ol class="method-list">
+<li><strong>Shared proactive guidance.</strong> Encode cumulative tactile motion and its signed transient difference into a compact contact-stage representation.</li>
+<li><strong>Tactile-aware slow expert.</strong> Condition mixture-of-experts routing on this guidance to generate a base action chunk.</li>
+<li><strong>Tactile-aware fast expert.</strong> Predict low-frequency refinement coefficients from temporal tactile feedback and proprioception. A contact gate from the shared guidance scales them before action reconstruction.</li>
+</ol></div></section>
+<section id="dynamics">
+<h2>Why Tactile Dynamics Provide Stage Guidance</h2>
+<p class="lead">The two tactile measures describe different aspects of contact, making them useful together.</p>
+<figure><a class="image-link" href="assets/dynamics.webp" data-zoom><img src="assets/dynamics.webp" width="2200" height="936" loading="lazy" alt="Tactile dynamics across contact stages and optical sensors. Cumulative motion describes deformation relative to the initial reference, while its signed change captures short-term variations."></a><figcaption>Tactile dynamics across contact stages and optical sensors. Cumulative motion describes deformation relative to the initial reference, while its signed change captures short-term variations.</figcaption></figure>
+<div class="prose"><ul class="explanation-list">
+<li><strong>No contact vs. stable contact.</strong> Both can have little temporal change, but their cumulative deformation can differ.</li>
+<li><strong>Increasing vs. decreasing deformation.</strong> Similar cumulative magnitudes can occur in both cases, while the signed difference indicates the direction of change.</li>
+</ul><p>Together, these cues guide contact-stage adaptation without manually assigned stage labels.</p></div></section>
+<section id="spectral">
+<h2>Why Refine in a Low-Frequency Subspace?</h2>
+<figure><a class="image-link" href="assets/spectrum.webp" data-zoom><img src="assets/spectrum.webp" width="2200" height="1017" loading="lazy" alt="Spectral analysis of action trajectories. Energy in the analyzed trajectories concentrates in low-frequency modes across contact and non-contact stages."></a><figcaption>Spectral analysis of action trajectories. Energy in the analyzed trajectories concentrates in low-frequency modes across contact and non-contact stages.</figcaption></figure>
+<p class="prose">Motivated by this observation, the fast expert predicts a compact set of low-frequency refinement coefficients. The shared contact gate scales their contribution before inverse transformation to the action domain. This reduces the output dimension and promotes temporally smooth refinement within each action chunk.</p>
 </section>
-<section class="closing wrap" id="resources"><div><span class="eyebrow">GUIDEDVTLA</span><h2>Where proactive guidance<br>meets reactive refinement.</h2></div><a class="button primary" href="https://github.com/Shengqi77/GuidedVTLA" target="_blank" rel="noopener">Explore the code ↗</a></section>
-<footer class="wrap"><span>GuidedVTLA · Research project</span><span>Preview · Author information, paper link and videos pending</span></footer>
+<section id="experiments">
+<h2>Hardware Setup &amp; Tasks</h2>
+<p class="lead">Two real-world robot platforms and eight UniVTAC simulation tasks.</p>
+<figure><a class="image-link" href="assets/platforms.webp" data-zoom><img src="assets/platforms.webp" width="1800" height="712" loading="lazy" alt="Real-world setup. ALOHA performs cylinder cleaning and collection, fragile fruits collection and fragile chips collection. Flexiv performs plug insertion, gears assembly and USB light insertion."></a><figcaption>Real-world setup. ALOHA performs cylinder cleaning and collection, fragile fruits collection and fragile chips collection. Flexiv performs plug insertion, gears assembly and USB light insertion.</figcaption></figure>
+</section>
+<section id="results">
+<h2>Qualitative Results</h2>
+<p class="lead">Baseline and GuidedVTLA executions across the six real-world tasks.</p>
+<div class="task-carousel" data-task-group="01_real_world" role="region" aria-roledescription="carousel" aria-label="Six Real-World Tasks" tabindex="0">
+<div class="task-head" aria-live="polite"><h3 class="task-title">ALOHA · Cylinder Cleaning & Collection</h3><span class="task-count">1 / 6</span></div>
+<div class="task-stage"><button class="task-arrow" data-prev type="button" aria-label="Previous task">&#8249;</button><video controls playsinline preload="none" poster="assets/tasks/01_real_world/01_aloha_cylinder.jpg" aria-label="ALOHA · Cylinder Cleaning & Collection"><source src="assets/tasks/01_real_world/01_aloha_cylinder.mp4" type="video/mp4"></video><button class="task-arrow" data-next type="button" aria-label="Next task">&#8250;</button></div>
+<div class="task-dots" aria-label="Choose a task"></div>
+</div>
+<p class="media-note">All clips retain the playback speed indicated in the original demo. No additional speed-up is applied.</p>
+</section>
+<section id="quantitative">
+<p class="eyebrow">MEASURED PERFORMANCE</p>
+<h2>Quantitative Results</h2>
+<p class="lead">Success rates across two real-world platforms and the UniVTAC simulation benchmark.</p>
+<h3 class="subheading">Real-world manipulation</h3>
+<p class="quant-note">20 trials per task. Each value below is the success rate at the final task stage. The six-task mean is computed from these final-stage scores.</p>
+<div class="quant-scroll" tabindex="0" role="region" aria-label="Real-world final-stage success rates (%)"><table class="quant-table"><caption>Real-world final-stage success rates (%)</caption><thead><tr><th scope="col">Method</th><th scope="col">Cylinder<br>ALOHA</th><th scope="col">Fruits<br>ALOHA</th><th scope="col">Chips<br>ALOHA</th><th scope="col">Plug<br>Flexiv</th><th scope="col">Gears<br>Flexiv</th><th scope="col">Bulb<br>Flexiv</th><th scope="col">Avg.<br>6 tasks</th></tr></thead><tbody><tr class=""><th scope="row">ACT</th><td style="--heat:0.053">5.0</td><td style="--heat:0.040">0.0</td><td style="--heat:0.065">10.0</td><td style="--heat:0.040">0.0</td><td style="--heat:0.040">0.0</td><td style="--heat:0.040">0.0</td><td style="--heat:0.046">2.5</td></tr><tr class=""><th scope="row">π₀.₅</th><td style="--heat:0.128">35.0</td><td style="--heat:0.140">40.0</td><td style="--heat:0.215">70.0</td><td style="--heat:0.190">60.0</td><td style="--heat:0.190">60.0</td><td style="--heat:0.152">45.0</td><td style="--heat:0.169">51.7</td></tr><tr class=""><th scope="row">RDP</th><td style="--heat:0.090">20.0</td><td style="--heat:0.090">20.0</td><td style="--heat:0.140">40.0</td><td style="--heat:0.090">20.0</td><td style="--heat:0.065">10.0</td><td style="--heat:0.065">10.0</td><td style="--heat:0.090">20.0</td></tr><tr class=""><th scope="row">ViTacMotor</th><td style="--heat:0.115">30.0</td><td style="--heat:0.065">10.0</td><td style="--heat:0.090">20.0</td><td style="--heat:0.053">5.0</td><td style="--heat:0.040">0.0</td><td style="--heat:0.077">15.0</td><td style="--heat:0.073">13.3</td></tr><tr class=""><th scope="row">TacVLA</th><td style="--heat:0.152">45.0</td><td style="--heat:0.152">45.0</td><td style="--heat:0.228">75.0</td><td style="--heat:0.215">70.0</td><td style="--heat:0.203">65.0</td><td style="--heat:0.190" class="best">60.0</td><td style="--heat:0.190">60.0</td></tr><tr class=""><th scope="row">ForceVLA</th><td style="--heat:0.115">30.0</td><td style="--heat:0.165">50.0</td><td style="--heat:0.203">65.0</td><td style="--heat:0.178">55.0</td><td style="--heat:0.165">50.0</td><td style="--heat:0.152">45.0</td><td style="--heat:0.163">49.2</td></tr><tr class="ours"><th scope="row">GuidedVTLA</th><td style="--heat:0.178" class="best">55.0</td><td style="--heat:0.190" class="best">60.0</td><td style="--heat:0.253" class="best">85.0</td><td style="--heat:0.240" class="best">80.0</td><td style="--heat:0.228" class="best">75.0</td><td style="--heat:0.190" class="best">60.0</td><td style="--heat:0.213" class="best">69.2</td></tr></tbody></table></div>
+<h3 class="subheading">UniVTAC simulation</h3>
+<p class="quant-note">Compare like for like: the shared six-task scope includes every method. The eight-task scope includes only methods with results on all eight tasks.</p>
+<div class="quant-scroll" tabindex="0" role="region" aria-label="UniVTAC success rates (%)"><table class="quant-table"><caption>UniVTAC success rates (%)</caption><thead><tr><th scope="col">Method</th><th scope="col">Lift<br>Bottle</th><th scope="col">Pull-out<br>Key</th><th scope="col">Lift<br>Can</th><th scope="col">Put<br>Bottle</th><th scope="col">Insert<br>Hole</th><th scope="col">Insert<br>Tube</th><th scope="col">Insert<br>HDMI</th><th scope="col">Grasp<br>Classify</th><th scope="col">Avg.<br>1–6</th><th scope="col">Avg.<br>All</th></tr></thead><tbody><tr class=""><th scope="row">ACT</th><td style="--heat:0.103">25.0</td><td style="--heat:0.120">32.0</td><td style="--heat:0.147">43.0</td><td style="--heat:0.090">20.0</td><td style="--heat:0.065">10.0</td><td style="--heat:0.247">83.0</td><td style="--heat:0.077">15.0</td><td style="--heat:0.150">44.0</td><td style="--heat:0.129">35.5</td><td style="--heat:0.125">34.0</td></tr><tr class=""><th scope="row">π₀.₅</th><td style="--heat:0.290" class="best">100.0</td><td style="--heat:0.128">35.0</td><td style="--heat:0.055">6.0</td><td style="--heat:0.125">34.0</td><td style="--heat:0.103">25.0</td><td style="--heat:0.225">74.0</td><td style="--heat:0.060">8.0</td><td style="--heat:0.163">49.0</td><td style="--heat:0.154">45.7</td><td style="--heat:0.143">41.4</td></tr><tr class=""><th scope="row">UniVTAC-ACT</th><td style="--heat:0.203">65.0</td><td style="--heat:0.142">41.0</td><td style="--heat:0.090">20.0</td><td style="--heat:0.115">30.0</td><td style="--heat:0.140">40.0</td><td style="--heat:0.210">68.0</td><td style="--heat:0.110" class="best">28.0</td><td style="--heat:0.290" class="best">100.0</td><td style="--heat:0.150">44.0</td><td style="--heat:0.163">49.0</td></tr><tr class=""><th scope="row">Tactile-VLA*</th><td style="--heat:0.282">97.0</td><td style="--heat:0.120">32.0</td><td style="--heat:0.077">15.0</td><td style="--heat:0.065">10.0</td><td style="--heat:0.142">41.0</td><td style="--heat:0.180">56.0</td><td>—</td><td>—</td><td style="--heat:0.145">41.8</td><td>—</td></tr><tr class=""><th scope="row">FTP-1*</th><td style="--heat:0.282">97.0</td><td style="--heat:0.160">48.0</td><td style="--heat:0.203">65.0</td><td style="--heat:0.158">47.0</td><td style="--heat:0.200">64.0</td><td style="--heat:0.238">79.0</td><td>—</td><td>—</td><td style="--heat:0.207">66.7</td><td>—</td></tr><tr class="ours"><th scope="row">GuidedVTLA</th><td style="--heat:0.228">75.0</td><td style="--heat:0.287" class="best">99.0</td><td style="--heat:0.230" class="best">76.0</td><td style="--heat:0.205" class="best">66.0</td><td style="--heat:0.280" class="best">96.0</td><td style="--heat:0.282" class="best">97.0</td><td style="--heat:0.092">21.0</td><td style="--heat:0.225">74.0</td><td style="--heat:0.252" class="best">84.8</td><td style="--heat:0.229" class="best">75.5</td></tr></tbody></table></div>
+<p class="quant-note">Bold denotes the best score in each column, including ties. * Results reported by FTP-1, as cited in the paper. A dash indicates an unreported result, not zero. Means are calculated before rounding.</p>
+</section>
+<section id="robustness">
+<h2>Robustness</h2>
+<p class="lead">Recorded executions under changes in lighting, objects and object positions.</p>
+<h3 class="subheading">Environment Variations</h3>
+<div class="task-carousel" data-task-group="02_environment" role="region" aria-roledescription="carousel" aria-label="Environment Variations" tabindex="0">
+<div class="task-head" aria-live="polite"><h3 class="task-title">Non-uniform Light · Fruits & Chips</h3><span class="task-count">1 / 3</span></div>
+<div class="task-stage"><button class="task-arrow" data-prev type="button" aria-label="Previous task">&#8249;</button><video controls playsinline preload="none" poster="assets/tasks/02_environment/01_nonuniform_fruits_chips.jpg" aria-label="Non-uniform Light · Fruits & Chips"><source src="assets/tasks/02_environment/01_nonuniform_fruits_chips.mp4" type="video/mp4"></video><button class="task-arrow" data-next type="button" aria-label="Next task">&#8250;</button></div>
+<div class="task-dots" aria-label="Choose a task"></div>
+</div>
+<h3 class="subheading">Object Variations</h3>
+<div class="task-carousel" data-task-group="03_objects" role="region" aria-roledescription="carousel" aria-label="Object Variations" tabindex="0">
+<div class="task-head" aria-live="polite"><h3 class="task-title">Fruits Collection · Different Fruit Varieties</h3><span class="task-count">1 / 2</span></div>
+<div class="task-stage"><button class="task-arrow" data-prev type="button" aria-label="Previous task">&#8249;</button><video controls playsinline preload="none" poster="assets/tasks/03_objects/01_fruit_varieties.jpg" aria-label="Fruits Collection · Different Fruit Varieties"><source src="assets/tasks/03_objects/01_fruit_varieties.mp4" type="video/mp4"></video><button class="task-arrow" data-next type="button" aria-label="Next task">&#8250;</button></div>
+<div class="task-dots" aria-label="Choose a task"></div>
+</div>
+<h3 class="subheading">Object Position Variations</h3>
+<div class="task-carousel" data-task-group="04_positions" role="region" aria-roledescription="carousel" aria-label="Object Position Variations" tabindex="0">
+<div class="task-head" aria-live="polite"><h3 class="task-title">Chips Collection · Three Positions</h3><span class="task-count">1 / 4</span></div>
+<div class="task-stage"><button class="task-arrow" data-prev type="button" aria-label="Previous task">&#8249;</button><video controls playsinline preload="none" poster="assets/tasks/04_positions/01_chips_positions.jpg" aria-label="Chips Collection · Three Positions"><source src="assets/tasks/04_positions/01_chips_positions.mp4" type="video/mp4"></video><button class="task-arrow" data-next type="button" aria-label="Next task">&#8250;</button></div>
+<div class="task-dots" aria-label="Choose a task"></div>
+</div>
+<p class="media-note">These videos illustrate recorded executions, rather than aggregate success-rate estimates.</p>
+</section>
+<section id="cross-sensor">
+<h2>Cross-Sensor Generalization</h2>
+<p class="lead">Can a policy trained with one optical tactile sensor transfer to another?</p>
+<figure><a class="image-link" href="assets/cross-sensor.webp" data-zoom><img src="assets/cross-sensor.webp" width="2000" height="726" loading="lazy" alt="Cross-sensor evaluation. The paper compares tactile dynamics with tactile-image inputs when training on sensor A and testing on sensor B."></a><figcaption>Cross-sensor evaluation. The paper compares tactile dynamics with tactile-image inputs when training on sensor A and testing on sensor B.</figcaption></figure>
+<div class="task-carousel" data-task-group="05_cross_sensor" role="region" aria-roledescription="carousel" aria-label="Cross-Sensor Generalization" tabindex="0">
+<div class="task-head" aria-live="polite"><h3 class="task-title">Fruits Collection · Train on A, Test on B</h3><span class="task-count">1 / 2</span></div>
+<div class="task-stage"><button class="task-arrow" data-prev type="button" aria-label="Previous task">&#8249;</button><video controls playsinline preload="none" poster="assets/tasks/05_cross_sensor/01_fruits_sensor_transfer.jpg" aria-label="Fruits Collection · Train on A, Test on B"><source src="assets/tasks/05_cross_sensor/01_fruits_sensor_transfer.mp4" type="video/mp4"></video><button class="task-arrow" data-next type="button" aria-label="Next task">&#8250;</button></div>
+<div class="task-dots" aria-label="Choose a task"></div>
+</div>
+</section>
+<section id="resources">
+<h2>Resources</h2>
+<div class="links"><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h4M9 12h6M9 16h6"/></svg>Paper <small>Coming soon</small></span><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 3 12 18M18 3 6 21M9 8h6M9 16h6"/></svg>arXiv <small>Coming soon</small></span><span class="button resource-button pending" role="link" aria-disabled="true"><svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></svg>Code <small>Coming soon</small></span></div>
+</section>
 </main>
-<dialog id="figure-dialog" aria-label="Full method figure"><button id="close-dialog" class="control">Close ×</button><img src="assets/method.webp" alt="Full GuidedVTLA method figure"><p>Original method figure from the manuscript.</p></dialog>
+<footer class="wrap"><span>GuidedVTLA · Research project</span><a href="#top" id="back-top">Back to top ↑</a></footer>
+<dialog id="viewer" aria-label="Enlarged paper figure"><button id="close-viewer" autofocus aria-label="Close enlarged figure">Close ×</button><div class="viewer-scroll"><img id="viewer-image" alt=""></div><p>Scroll to inspect the full figure. Press Esc to close.</p></dialog>
 </body>
 </html>
