@@ -1,0 +1,7 @@
+.paper-preview{margin:28px 0 4px!important}
+.paper-preview-scroll{overflow-x:auto;padding:8px 2px 12px;scrollbar-width:thin}
+.paper-preview-link{display:block;min-width:960px;border-radius:5px;outline-offset:4px;transition:filter .2s}
+.paper-preview-link:hover{filter:drop-shadow(0 3px 5px #73596c33)}
+.paper-preview-link img{width:100%;height:auto}
+.story .paper-preview figcaption{text-align:center;font-size:12px;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){.paper-preview-link{transition:none}}

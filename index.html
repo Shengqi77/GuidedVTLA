@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="quantitative.css">
 <link rel="stylesheet" href="related.css">
 <link rel="stylesheet" href="resources.css">
+<link rel="stylesheet" href="paper-preview.css">
 <script src="related.js" defer></script>
 <script src="project.js" defer></script>
 <script src="hero.js" defer></script>
@@ -68,7 +69,16 @@
 <div class="prose">
 <p>Multi-stage contact-rich manipulation requires robots to dynamically adapt global execution strategies across stages while responding to local contact changes in real time. However, existing methods primarily use touch as reactive feedback, leaving its potential for stage-aware guidance underexplored. In this work, we view touch as a coin with two complementary sides: locally, it provides <em>reactive</em> feedback on instantaneous contact, while globally, its temporal dynamics offer <em>proactive</em> contact stage guidance. By exploring the temporal dynamics of optical tactile sensing, we discover that cumulative tactile motions and transient differences jointly yield complementary cues for contact stages and transitions.</p>
 <p>Building on this insight, we propose GuidedVTLA, a slow-fast vision-tactile-language-action model that integrates proactive tactile guidance with reactive tactile refinement. Specifically, the slow expert uses the shared proactive guidance to route a stage-aware Mixture-of-Experts for adaptive action generation, while the fast expert uses temporal tactile cues to refine the action chunk during execution, with the shared guidance modulating refinement strength. Furthermore, motivated by the concentration of action trajectory energy in low-frequency modes, we restrict refinement to a compact spectral subspace, reducing the prediction dimension and promoting temporally smooth refinement. Experiments on multi-stage contact-rich tasks across two real-world robot platforms and in simulation demonstrate the superior performance and robustness of GuidedVTLA.</p>
-</div></section>
+</div>
+<figure class="paper-preview">
+<div class="paper-preview-scroll" tabindex="0" role="region" aria-label="Paper preview, pages 1 through 11. Scroll horizontally on smaller screens.">
+<a class="paper-preview-link" href="assets/GuidedVTLA.pdf" target="_blank" rel="noopener" aria-label="Open the GuidedVTLA paper PDF in a new tab">
+<img src="assets/paper-pages-01-11.webp" loading="lazy" alt="The first eleven pages of GuidedVTLA, arranged from left to right. Click to read the paper.">
+</a>
+</div>
+<figcaption>Pages 1–11 · Click to read the paper</figcaption>
+</figure>
+</section>
 <section id="method">
 <h2>Method</h2>
 <p class="lead">How does one tactile signal guide both action generation and refinement?</p>
