@@ -11,6 +11,8 @@
 #paper-info .authors{font-size:21px;column-gap:13px;row-gap:9px;font-weight:400;color:#3273dc;max-width:1080px}
 #paper-info .authors>span:not(:last-child)::after{content:",";color:#363636;margin-left:2px}
 #paper-info .authors sup{color:#363636}
+#paper-info .authors a{text-decoration:none;text-underline-offset:4px}
+#paper-info .authors a:hover,#paper-info .authors a:focus-visible{text-decoration:underline}
 #paper-info .affiliations{font-size:18px;color:#363636}
 #paper-info .paper-subtitle{font-size:30px;font-weight:500;max-width:1030px}
 @media(max-width:760px){.cinema-content{width:100%}.cinema-subtitle{white-space:normal;font-size:21px}#paper-info .authors{font-size:17px;column-gap:12px}#paper-info .affiliations{font-size:14px}#paper-info .paper-subtitle{font-size:23px}}
