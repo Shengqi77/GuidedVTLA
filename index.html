@@ -86,7 +86,7 @@
 </div>
 </div>
 <div class="teaser wrap" id="overview">
-<figure><a class="image-link" href="assets/overview.webp" data-zoom><img src="assets/overview.webp" width="1800" height="998" loading="lazy" alt="Two complementary roles of touch. GuidedVTLA combines proactive contact-stage guidance with reactive tactile refinement, coordinating the slow and fast experts through shared guidance."></a><figcaption>Two complementary roles of touch. GuidedVTLA combines proactive contact-stage guidance with reactive tactile refinement, coordinating the slow and fast experts through shared guidance.</figcaption></figure>
+<figure><a class="image-link" href="assets/overview.webp" data-zoom><img src="assets/overview.webp" width="1800" height="831" loading="lazy" alt="Two complementary roles of touch. GuidedVTLA combines proactive contact-stage guidance with reactive tactile refinement, coordinating the slow and fast experts through shared guidance."></a><figcaption>Two complementary roles of touch. GuidedVTLA combines proactive contact-stage guidance with reactive tactile refinement, coordinating the slow and fast experts through shared guidance.</figcaption></figure>
 </div>
 <nav class="toc" aria-label="Section navigation"><div class="wrap"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#dynamics">Analysis</a><a href="#experiments">Setup &amp; tasks</a><a href="#results">Results</a><a href="#robustness">Robustness</a><a href="#cross-sensor">Cross-sensor</a></div></nav>
 <main id="main" class="wrap story">
@@ -108,7 +108,7 @@
 <section id="method">
 <h2>Method</h2>
 <p class="lead">How does one tactile signal guide both action generation and refinement?</p>
-<figure><a class="image-link" href="assets/method.webp" data-zoom><img src="assets/method.webp" width="2000" height="806" loading="lazy" alt="Overview of GuidedVTLA. Shared proactive guidance connects the slow action expert with the fast spectral refinement expert."></a><figcaption>Overview of GuidedVTLA. Shared proactive guidance connects the slow action expert with the fast spectral refinement expert.</figcaption></figure>
+<figure><a class="image-link" href="assets/method.webp" data-zoom><img src="assets/method.webp" width="2400" height="1030" loading="lazy" alt="Overview of GuidedVTLA. Shared proactive guidance connects the slow action expert with the fast spectral refinement expert."></a><figcaption>Overview of GuidedVTLA. Shared proactive guidance connects the slow action expert with the fast spectral refinement expert.</figcaption></figure>
 <div class="prose"><ol class="method-list">
 <li><strong>Shared proactive guidance.</strong> Encode cumulative tactile motion and its signed transient difference into a compact contact-stage representation.</li>
 <li><strong>Tactile-aware slow expert.</strong> Condition mixture-of-experts routing on this guidance to generate a base action chunk.</li>
@@ -117,14 +117,14 @@
 <section id="dynamics">
 <h2>Why Tactile Dynamics Provide Stage Guidance</h2>
 <p class="lead">The two tactile measures describe different aspects of contact, making them useful together.</p>
-<figure><a class="image-link" href="assets/dynamics.webp" data-zoom><img src="assets/dynamics.webp" width="2200" height="936" loading="lazy" alt="Tactile dynamics across contact stages and optical sensors. Cumulative motion describes deformation relative to the initial reference, while its signed change captures short-term variations."></a><figcaption>Tactile dynamics across contact stages and optical sensors. Cumulative motion describes deformation relative to the initial reference, while its signed change captures short-term variations.</figcaption></figure>
+<figure><a class="image-link" href="assets/dynamics.webp" data-zoom><img src="assets/dynamics.webp" width="2400" height="1098" loading="lazy" alt="Tactile dynamics across contact stages and optical sensors. Cumulative motion describes deformation relative to the initial reference, while its signed change captures short-term variations."></a><figcaption>Tactile dynamics across contact stages and optical sensors. Cumulative motion describes deformation relative to the initial reference, while its signed change captures short-term variations.</figcaption></figure>
 <div class="prose"><ul class="explanation-list">
 <li><strong>No contact vs. stable contact.</strong> Both can have little temporal change, but their cumulative deformation can differ.</li>
 <li><strong>Increasing vs. decreasing deformation.</strong> Similar cumulative magnitudes can occur in both cases, while the signed difference indicates the direction of change.</li>
 </ul><p>Together, these cues guide contact-stage adaptation without manually assigned stage labels.</p></div></section>
 <section id="spectral">
 <h2>Why Refine in a Low-Frequency Subspace?</h2>
-<figure><a class="image-link" href="assets/spectrum.webp" data-zoom><img src="assets/spectrum.webp" width="2200" height="1017" loading="lazy" alt="Spectral analysis of action trajectories. Energy in the analyzed trajectories concentrates in low-frequency modes across contact and non-contact stages."></a><figcaption>Spectral analysis of action trajectories. Energy in the analyzed trajectories concentrates in low-frequency modes across contact and non-contact stages.</figcaption></figure>
+<figure><a class="image-link" href="assets/spectrum.webp" data-zoom><img src="assets/spectrum.webp" width="2400" height="1129" loading="lazy" alt="Spectral analysis of action trajectories. Energy in the analyzed trajectories concentrates in low-frequency modes across contact and non-contact stages."></a><figcaption>Spectral analysis of action trajectories. Energy in the analyzed trajectories concentrates in low-frequency modes across contact and non-contact stages.</figcaption></figure>
 <p class="prose">Motivated by this observation, the fast expert predicts a compact set of low-frequency refinement coefficients. The shared contact gate scales their contribution before inverse transformation to the action domain. This reduces the output dimension and promotes temporally smooth refinement within each action chunk.</p>
 </section>
 <section id="experiments">
@@ -180,7 +180,7 @@
 <section id="cross-sensor">
 <h2>Cross-Sensor Generalization</h2>
 <p class="lead">Can a policy trained with one optical tactile sensor transfer to another?</p>
-<figure><a class="image-link" href="assets/cross-sensor.webp" data-zoom><img src="assets/cross-sensor.webp" width="2000" height="726" loading="lazy" alt="Cross-sensor evaluation. The paper compares tactile dynamics with tactile-image inputs when training on sensor A and testing on sensor B."></a><figcaption>Cross-sensor evaluation. The paper compares tactile dynamics with tactile-image inputs when training on sensor A and testing on sensor B.</figcaption></figure>
+<figure><a class="image-link" href="assets/cross-sensor.webp" data-zoom><img src="assets/cross-sensor.webp" width="2200" height="822" loading="lazy" alt="Cross-sensor evaluation. The paper compares tactile dynamics with tactile-image inputs when training on sensor A and testing on sensor B."></a><figcaption>Cross-sensor evaluation. The paper compares tactile dynamics with tactile-image inputs when training on sensor A and testing on sensor B.</figcaption></figure>
 <div class="task-carousel" data-task-group="05_cross_sensor" role="region" aria-roledescription="carousel" aria-label="Cross-Sensor Generalization" tabindex="0">
 <div class="task-head" aria-live="polite"><h3 class="task-title">Fruits Collection · Train on A, Test on B</h3><span class="task-count">1 / 2</span></div>
 <div class="task-stage"><button class="task-arrow" data-prev type="button" aria-label="Previous task">&#8249;</button><video controls playsinline preload="none" poster="assets/tasks/05_cross_sensor/01_fruits_sensor_transfer.jpg" aria-label="Fruits Collection · Train on A, Test on B"><source src="assets/tasks/05_cross_sensor/01_fruits_sensor_transfer.mp4" type="video/mp4"></video><button class="task-arrow" data-next type="button" aria-label="Next task">&#8250;</button></div>
